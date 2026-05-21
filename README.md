@@ -123,6 +123,13 @@ plutil -lint VolC.xcodeproj/project.pbxproj VolC/Info.plist VolC/VolC.entitlemen
 
 For release guidance, see [docs/RELEASE.md](docs/RELEASE.md).
 
+## Contributing and Safety
+
+- Contribution guide: [CONTRIBUTING.md](CONTRIBUTING.md)
+- App support policy: [docs/APP_SUPPORT_POLICY.md](docs/APP_SUPPORT_POLICY.md)
+- Security policy: [SECURITY.md](SECURITY.md)
+- Code of conduct: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+
 ## License
 
 MIT. See [LICENSE](LICENSE).

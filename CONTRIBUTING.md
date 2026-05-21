@@ -24,6 +24,8 @@ Also run the app from Xcode and confirm the menu bar icon appears.
 
 Per-app system volume is not available through public CoreAudio HAL. New app support should therefore be app-specific and honest about what it controls.
 
+Unsupported apps must remain read-only unless they expose a public/scriptable volume API.
+
 When adding an app:
 
 1. Add a bundle ID mapping in `AppleScriptVolumeBackend.swift`.
@@ -31,6 +33,25 @@ When adding an app:
 3. Do not use private APIs.
 4. Do not add virtual audio device dependencies.
 5. Update `README.md` with limitations.
+
+See [docs/APP_SUPPORT_POLICY.md](docs/APP_SUPPORT_POLICY.md) for the full app support policy.
+
+## Safety Rules
+
+Do not add:
+
+- private CoreAudio APIs
+- kernel extensions
+- virtual audio devices unless the project direction intentionally changes
+- microphone/input capture
+- hidden audio processing
+- unnecessary entitlements
+
+Review every AppleScript change carefully.
+
+Any new entitlement must be justified in the pull request.
+
+Any new dependency should require a strong reason and should be documented in the pull request.
 
 ## Pull Requests
 
@@ -42,3 +63,10 @@ Please include:
 - screenshots for UI changes
 - known limitations or regressions
 
+Use the pull request checklist and keep documentation updated when behavior or support changes.
+
+## Community and Security
+
+Please follow [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+
+Please report security issues through GitHub private vulnerability reporting instead of public issues. See [SECURITY.md](SECURITY.md).
