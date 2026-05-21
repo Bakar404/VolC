@@ -12,9 +12,9 @@ The app is intentionally simple: no virtual audio devices, no kernel extensions,
 
 ## Screenshots
 
-| Light | Dark |
-| --- | --- |
-| <img src="docs/assets/volc-ui-light.svg" alt="VolC light mode popover screenshot" width="360"> | <img src="docs/assets/volc-ui-dark.svg" alt="VolC dark mode popover screenshot" width="360"> |
+| Light                                                                                          | Dark                                                                                         |
+| ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| <img src="docs/assets/volc-ui-light.png" alt="VolC light mode popover screenshot" width="360"> | <img src="docs/assets/volc-ui-dark.png" alt="VolC dark mode popover screenshot" width="360"> |
 
 ## Status
 
@@ -32,16 +32,16 @@ See [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md) for macOS and Xcode guidance.
 
 ## Supported Per-App Controls
 
-| App | Bundle ID | Support level |
-| --- | --- | --- |
-| Spotify | `com.spotify.client` | Uses Spotify's AppleScript `sound volume` property |
-| Music | `com.apple.Music` | Uses Music's AppleScript `sound volume` property |
-| Google Chrome | `com.google.Chrome`, `com.google.Chrome.helper*` | Sets reachable `audio` and `video` element volume in Chrome tabs |
-| Microsoft Edge | `com.microsoft.edgemac`, helper processes | Sets reachable `audio` and `video` element volume in Edge tabs |
-| Brave | `com.brave.Browser`, helper processes | Sets reachable `audio` and `video` element volume in Brave tabs |
-| Vivaldi | `com.vivaldi.Vivaldi`, helper processes | Sets reachable `audio` and `video` element volume in Vivaldi tabs |
-| Opera / Opera GX | `com.operasoftware.Opera*`, helper processes | Sets reachable `audio` and `video` element volume in Opera tabs |
-| Safari | `com.apple.Safari` | Sets reachable `audio` and `video` element volume in Safari tabs |
+| App              | Bundle ID                                        | Support level                                                     |
+| ---------------- | ------------------------------------------------ | ----------------------------------------------------------------- |
+| Spotify          | `com.spotify.client`                             | Uses Spotify's AppleScript `sound volume` property                |
+| Music            | `com.apple.Music`                                | Uses Music's AppleScript `sound volume` property                  |
+| Google Chrome    | `com.google.Chrome`, `com.google.Chrome.helper*` | Sets reachable `audio` and `video` element volume in Chrome tabs  |
+| Microsoft Edge   | `com.microsoft.edgemac`, helper processes        | Sets reachable `audio` and `video` element volume in Edge tabs    |
+| Brave            | `com.brave.Browser`, helper processes            | Sets reachable `audio` and `video` element volume in Brave tabs   |
+| Vivaldi          | `com.vivaldi.Vivaldi`, helper processes          | Sets reachable `audio` and `video` element volume in Vivaldi tabs |
+| Opera / Opera GX | `com.operasoftware.Opera*`, helper processes     | Sets reachable `audio` and `video` element volume in Opera tabs   |
+| Safari           | `com.apple.Safari`                               | Sets reachable `audio` and `video` element volume in Safari tabs  |
 
 Browser support requires **Allow JavaScript from Apple Events** in that browser. Browser support does not reach cross-origin frames, native browser UI sounds, DRM media that blocks script access, or browsers without compatible AppleScript automation.
 
