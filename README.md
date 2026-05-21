@@ -1,6 +1,6 @@
 # VolC
 
-<p align="center">
+<p align="left">
   <img src="docs/assets/volc-logo-dark.svg" alt="VolC dark mode logo" width="180">
 </p>
 
