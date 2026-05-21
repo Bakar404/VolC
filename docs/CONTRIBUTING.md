@@ -32,9 +32,9 @@ When adding an app:
 2. Keep the script scoped to volume only.
 3. Do not use private APIs.
 4. Do not add virtual audio device dependencies.
-5. Update `README.md` with limitations.
+5. Update [README.md](../README.md) with limitations.
 
-See [docs/APP_SUPPORT_POLICY.md](docs/APP_SUPPORT_POLICY.md) for the full app support policy.
+See [APP_SUPPORT_POLICY.md](APP_SUPPORT_POLICY.md) for the full app support policy.
 
 ## Safety Rules
 
