@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 868" role="img" aria-labelledby="title desc">
+  <title id="title">VolC light mode popover screenshot</title>
+  <desc id="desc">A light mode mock screenshot of the VolC macOS menu bar popover with master, Chrome, and Music volume rows.</desc>
+  <defs>
+    <linearGradient id="wallpaper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4b4937"/>
+      <stop offset="45%" stop-color="#a99a79"/>
+      <stop offset="100%" stop-color="#314526"/>
+    </linearGradient>
+    <linearGradient id="panelLight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ebe4d8"/>
+      <stop offset="100%" stop-color="#d7d9c8"/>
+    </linearGradient>
+    <linearGradient id="volcBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#42cbff"/>
+      <stop offset="100%" stop-color="#0676ff"/>
+    </linearGradient>
+    <linearGradient id="volcPurple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8a6dff"/>
+      <stop offset="100%" stop-color="#8b42ff"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="7" stdDeviation="12" flood-color="#000000" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="740" height="868" fill="url(#wallpaper)"/>
+  <rect width="740" height="48" fill="#3f4234"/>
+  <text x="357" y="32" fill="#f2f2ec" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="24">Speaker</text>
+  <text x="427" y="33" fill="#f2f2ec" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="27">Play</text>
+  <text x="494" y="33" fill="#f2f2ec" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="26">Display</text>
+  <text x="565" y="33" fill="#f2f2ec" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="24">Volume</text>
+
+  <path d="M343 72 L370 47 L397 72 Z" fill="#dbd8c8"/>
+  <rect x="4" y="72" width="736" height="796" rx="18" fill="url(#panelLight)" filter="url(#softShadow)"/>
+  <rect x="5" y="73" width="734" height="794" rx="17" fill="none" stroke="#f8f5ea" stroke-opacity="0.7"/>
+
+  <rect x="32" y="97" width="83" height="83" rx="13" fill="#fbfaf5"/>
+  <path d="M55 126 L77 165 L89 140" fill="none" stroke="url(#volcBlue)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M104 126 A24 24 0 1 0 104 157" fill="none" stroke="url(#volcPurple)" stroke-width="15" stroke-linecap="round"/>
+
+  <text x="139" y="133" fill="#40403e" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="30" font-weight="700">VolC</text>
+  <text x="139" y="166" fill="#625d55" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="20" font-weight="700">2 active apps</text>
+  <rect x="644" y="122" width="68" height="32" rx="9" fill="#c8c7b6"/>
+  <text x="657" y="145" fill="#25251f" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="22" font-weight="700">Quit</text>
+
+  <g transform="translate(24 199)">
+    <rect width="696" height="79" rx="16" fill="#f0ece4" fill-opacity="0.78"/>
+    <text x="23" y="51" fill="#786d60" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="29">)))</text>
+    <text x="84" y="49" fill="#464543" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="25" font-weight="700">Master</text>
+    <rect x="200" y="35" width="376" height="7" rx="3.5" fill="#d3d0c5"/>
+    <rect x="200" y="35" width="232" height="7" rx="3.5" fill="#1685f8"/>
+    <circle cx="432" cy="39" r="21" fill="#e8e6dd" stroke="#c7c4ba" stroke-width="2"/>
+    <text x="635" y="48" fill="#6d6a62" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="24" font-weight="700">63%</text>
+  </g>
+
+  <g transform="translate(24 298)">
+    <rect width="696" height="88" rx="13" fill="#f7f6ef" fill-opacity="0.9"/>
+    <rect x="24" y="21" width="46" height="46" rx="10" fill="#ffffff"/>
+    <circle cx="47" cy="44" r="18" fill="#f4c20d"/>
+    <path d="M47 26 A18 18 0 0 1 65 44 L47 44 Z" fill="#3cba54"/>
+    <path d="M29 44 A18 18 0 0 1 47 26 L47 44 Z" fill="#db4437"/>
+    <path d="M65 44 A18 18 0 0 1 34 57 L47 44 Z" fill="#4285f4"/>
+    <circle cx="47" cy="44" r="8" fill="#4285f4" stroke="#fff" stroke-width="3"/>
+    <text x="94" y="54" fill="#4c4c4a" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="25" font-weight="700">Google Chrome</text>
+    <rect x="298" y="42" width="280" height="7" rx="3.5" fill="#d5d4ce"/>
+    <rect x="298" y="42" width="87" height="7" rx="3.5" fill="#1685f8"/>
+    <circle cx="388" cy="45" r="21" fill="#f0efeb" stroke="#cbc9c4" stroke-width="2"/>
+    <text x="637" y="54" fill="#706f69" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="24" font-weight="700">29%</text>
+  </g>
+
+  <g transform="translate(24 397)">
+    <rect width="696" height="88" rx="13" fill="#f7f6ef" fill-opacity="0.9"/>
+    <rect x="24" y="21" width="46" height="46" rx="10" fill="#ff3158"/>
+    <text x="39" y="56" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="31" font-weight="800">♪</text>
+    <text x="94" y="54" fill="#4c4c4a" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="25" font-weight="700">Music</text>
+    <rect x="298" y="42" width="280" height="7" rx="3.5" fill="#d5d4ce"/>
+    <rect x="298" y="42" width="185" height="7" rx="3.5" fill="#1685f8"/>
+    <circle cx="497" cy="45" r="21" fill="#f0efeb" stroke="#cbc9c4" stroke-width="2"/>
+    <text x="637" y="54" fill="#706f69" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="24" font-weight="700">75%</text>
+  </g>
+
+  <text x="30" y="836" fill="#4b4a46" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="31">⏻</text>
+  <text x="74" y="835" fill="#464543" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Launch at login</text>
+  <rect x="266" y="805" width="76" height="43" rx="21.5" fill="#1087ff"/>
+  <circle cx="321" cy="826.5" r="20" fill="#f5f4f0" stroke="#5d5d59"/>
+</svg>

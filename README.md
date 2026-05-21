@@ -10,6 +10,12 @@ VolC is a small native macOS menu bar app for controlling app audio where macOS 
 
 The app is intentionally simple: no virtual audio devices, no kernel extensions, no third-party dependencies, and no microphone capture.
 
+## Screenshots
+
+| Light | Dark |
+| --- | --- |
+| <img src="docs/assets/volc-ui-light.svg" alt="VolC light mode popover screenshot" width="360"> | <img src="docs/assets/volc-ui-dark.svg" alt="VolC dark mode popover screenshot" width="360"> |
+
 ## Status
 
 VolC is usable, but it is also honest about macOS limitations. Public CoreAudio HAL can enumerate apps that are producing audio, but it does not provide a public writable per-process gain control. For that reason, VolC uses CoreAudio for discovery and falls back to AppleScript for apps that expose scriptable volume controls.
