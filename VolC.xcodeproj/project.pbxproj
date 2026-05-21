@@ -14,6 +14,7 @@
 		A10000000000000000000005 /* AppleScriptVolumeBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000005 /* AppleScriptVolumeBackend.swift */; };
 		A10000000000000000000006 /* VolumePersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000006 /* VolumePersistence.swift */; };
 		A10000000000000000000007 /* LaunchAtLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000007 /* LaunchAtLoginService.swift */; };
+		A1000000000000000000000C /* SingleInstanceGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000000F /* SingleInstanceGuard.swift */; };
 		A10000000000000000000008 /* VolumeMixerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000008 /* VolumeMixerViewModel.swift */; };
 		A10000000000000000000009 /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000009 /* PopoverView.swift */; };
 		A1000000000000000000000A /* AppVolumeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000000A /* AppVolumeRowView.swift */; };
@@ -28,6 +29,7 @@
 		A00000000000000000000005 /* AppleScriptVolumeBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleScriptVolumeBackend.swift; sourceTree = "<group>"; };
 		A00000000000000000000006 /* VolumePersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumePersistence.swift; sourceTree = "<group>"; };
 		A00000000000000000000007 /* LaunchAtLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginService.swift; sourceTree = "<group>"; };
+		A0000000000000000000000F /* SingleInstanceGuard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleInstanceGuard.swift; sourceTree = "<group>"; };
 		A00000000000000000000008 /* VolumeMixerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeMixerViewModel.swift; sourceTree = "<group>"; };
 		A00000000000000000000009 /* PopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
 		A0000000000000000000000A /* AppVolumeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVolumeRowView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				A00000000000000000000005 /* AppleScriptVolumeBackend.swift */,
 				A00000000000000000000006 /* VolumePersistence.swift */,
 				A00000000000000000000007 /* LaunchAtLoginService.swift */,
+				A0000000000000000000000F /* SingleInstanceGuard.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				A10000000000000000000005 /* AppleScriptVolumeBackend.swift in Sources */,
 				A10000000000000000000006 /* VolumePersistence.swift in Sources */,
 				A10000000000000000000007 /* LaunchAtLoginService.swift in Sources */,
+				A1000000000000000000000C /* SingleInstanceGuard.swift in Sources */,
 				A10000000000000000000008 /* VolumeMixerViewModel.swift in Sources */,
 				A10000000000000000000009 /* PopoverView.swift in Sources */,
 				A1000000000000000000000A /* AppVolumeRowView.swift in Sources */,

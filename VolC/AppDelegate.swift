@@ -6,8 +6,14 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var statusItem: NSStatusItem?
     private let popover = NSPopover()
     private let viewModel = VolumeMixerViewModel()
+    private let singleInstanceGuard = SingleInstanceGuard()
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        guard singleInstanceGuard.acquire() else {
+            NSApp.terminate(nil)
+            return
+        }
+
         NSApp.setActivationPolicy(.accessory)
         configureStatusItem()
         configurePopover()

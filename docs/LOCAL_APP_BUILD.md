@@ -81,6 +81,14 @@ After launching the app from **Applications**, open the VolC menu bar popover an
 
 Launch at login works best when the app lives in **Applications** instead of the Xcode build folder.
 
+If you previously enabled **Launch at login** from an Xcode build folder and then moved VolC to **Applications**, macOS may keep more than one login entry. Quit all running copies, remove duplicate VolC entries in:
+
+```text
+System Settings > General > Login Items & Extensions
+```
+
+Then open the **Applications** copy and toggle **Launch at login** off and back on.
+
 ## Updating Your Local App
 
 1. Pull the latest source:

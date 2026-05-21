@@ -107,6 +107,12 @@ VolC does not capture audio, create an input stream, use `AVCapture`, or access 
   - In Xcode, confirm the app is still running.
   - VolC is an accessory app and will not show in the Dock.
 
+- **VolC starts twice at login**
+  - Quit all running copies of VolC.
+  - Remove duplicate VolC entries in **System Settings > General > Login Items & Extensions**.
+  - Open the copy in **Applications**, then toggle **Launch at login** off and back on.
+  - VolC also has a single-instance lock, so a second copy should now exit before creating another menu bar item.
+
 - **Xcode App Store page says macOS 26+ is required**
   - Download a compatible older Xcode from Apple's developer downloads page instead of the App Store.
 
