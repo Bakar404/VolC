@@ -1,5 +1,9 @@
 # VolC
 
+<p align="center">
+  <img src="docs/assets/volc-logo-dark.svg" alt="VolC dark mode logo" width="180">
+</p>
+
 [![macOS CI](https://github.com/Bakar404/VolC/actions/workflows/macos-ci.yml/badge.svg)](https://github.com/Bakar404/VolC/actions/workflows/macos-ci.yml)
 
 VolC is a small native macOS menu bar app for controlling app audio where macOS exposes a safe public path to do it.
