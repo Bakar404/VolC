@@ -1,0 +1,46 @@
+name: macOS CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Validate Swift and project files
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Show tool versions
+        run: |
+          sw_vers
+          xcodebuild -version
+          swift --version
+
+      - name: Typecheck Swift sources
+        run: |
+          swiftc -typecheck \
+            -target arm64-apple-macos13.0 \
+            -sdk "$(xcrun --sdk macosx --show-sdk-path)" \
+            $(find VolC -name '*.swift' | sort)
+
+      - name: Validate plist files
+        run: |
+          plutil -lint \
+            VolC.xcodeproj/project.pbxproj \
+            VolC/Info.plist \
+            VolC/VolC.entitlements
+
+      - name: Build Xcode project without signing
+        run: |
+          xcodebuild \
+            -project VolC.xcodeproj \
+            -target VolC \
+            -configuration Debug \
+            -destination 'platform=macOS' \
+            CODE_SIGNING_ALLOWED=NO \
+            build

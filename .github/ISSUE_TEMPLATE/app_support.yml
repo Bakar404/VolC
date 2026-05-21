@@ -1,0 +1,35 @@
+name: App support request
+description: Request volume control support for another app
+title: "[App Support]: "
+labels: ["app support"]
+body:
+  - type: input
+    id: app
+    attributes:
+      label: App name
+      placeholder: "Example Player"
+    validations:
+      required: true
+  - type: input
+    id: bundle
+    attributes:
+      label: Bundle ID
+      description: You can usually find this with `osascript -e 'id of app "App Name"'`.
+      placeholder: "com.example.player"
+    validations:
+      required: false
+  - type: textarea
+    id: scripting
+    attributes:
+      label: Scriptability
+      description: Does the app expose AppleScript volume controls or another public API?
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Include macOS version, app version, and any links to scripting docs.
+    validations:
+      required: false
+
