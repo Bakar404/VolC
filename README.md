@@ -49,7 +49,7 @@ Apps without AppleScript support are shown as read-only because public HAL disco
 
 Known read-only categories include Zoom, Discord, Firefox, most games, and most Electron apps. These apps can usually be detected while producing audio, but VolC cannot change their individual system output volume without using a virtual audio device or private API.
 
-## Build and Run
+## Build and Run From Xcode
 
 1. Install a compatible Xcode. See [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md).
 2. Clone the repo:
@@ -70,6 +70,19 @@ Known read-only categories include Zoom, Discord, Firefox, most games, and most 
 6. Press `Cmd + R`.
 
 VolC runs as a menu bar app, so it will not appear in the Dock. Look for the speaker icon near the clock/Wi-Fi area.
+
+## Install as a Local App
+
+You do not need to keep Xcode open after building VolC for yourself.
+
+1. In Xcode, choose **Product > Build For > Running**.
+2. In the Project navigator, expand **Products**.
+3. Right-click **VolC.app** and choose **Show in Finder**.
+4. Quit any currently running Xcode-launched copy of VolC.
+5. Move the built **VolC.app** into your **Applications** folder.
+6. Open VolC from **Applications**.
+
+If macOS shows a first-launch warning, right-click **VolC.app** and choose **Open**. For a detailed personal build and update workflow, see [docs/LOCAL_APP_BUILD.md](docs/LOCAL_APP_BUILD.md).
 
 ## Permissions
 

@@ -7,6 +7,8 @@ This project can be distributed in two ways:
 
 For semi-technical users, source-first is acceptable. For non-technical users, a notarized app bundle is much better.
 
+For users who want to build a personal copy and move it to **Applications**, see [LOCAL_APP_BUILD.md](LOCAL_APP_BUILD.md).
+
 ## Source-First Release
 
 1. Make sure `main` builds locally.
@@ -61,4 +63,3 @@ Use simple semantic versions:
 
 - `0.x`: early public builds
 - `1.0`: stable source build instructions, stable UI, clear compatibility docs, and at least one signed/notarized release if distributing binaries
-
