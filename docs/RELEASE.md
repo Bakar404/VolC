@@ -3,7 +3,7 @@
 This project can be distributed in two ways:
 
 1. Source-first: users clone the repo and run it in Xcode.
-2. App bundle: maintainer publishes a signed and preferably notarized `.zip` under GitHub Releases.
+2. App bundle: the release workflow automatically publishes an ad-hoc signed `VolC-adhoc.zip` under GitHub Releases. A maintainer can optionally upload a Developer ID signed and notarized `VolC.zip` separately.
 
 For semi-technical users, source-first is acceptable. For non-technical users, a notarized app bundle is much better.
 
@@ -20,7 +20,7 @@ For users who want to build a personal copy and move it to **Applications**, see
    ```
 
 3. Update `README.md` and `docs/COMPATIBILITY.md` if support changed.
-4. Create a GitHub release tag such as `v0.1.0`.
+4. Create and push a tag matching `v*`, such as `v0.1.0`. The [release workflow](../.github/workflows/release.yml) builds the Release app with ad-hoc signing, verifies its signature, and automatically attaches `VolC-adhoc.zip` to the GitHub release.
 5. In the release notes, include:
    - tested macOS version
    - tested Xcode version
@@ -29,7 +29,11 @@ For users who want to build a personal copy and move it to **Applications**, see
 
 ## App Bundle Release
 
-Use this only if you have a Developer ID certificate. Unsigned apps work poorly for public distribution because Gatekeeper will warn users.
+The automated `VolC-adhoc.zip` is ad-hoc signed, not Developer ID signed or notarized. Gatekeeper may block it on first open; the [README installation steps](../README.md#install-from-releases) explain **Open Anyway** and the quarantine-removal fallback.
+
+### Optional Developer ID Signing and Notarization
+
+This is a manual step requiring a Developer ID certificate. It does not replace the automated ad-hoc asset.
 
 Recommended flow:
 
@@ -38,7 +42,7 @@ Recommended flow:
 3. In Organizer, export a Developer ID signed app.
 4. Notarize the exported app with Apple.
 5. Staple notarization to the app.
-6. Zip the `.app` and upload it to GitHub Releases.
+6. Zip the `.app` as `VolC.zip` and upload it to the same GitHub release. Keep `VolC-adhoc.zip` as the separate automated asset so workflow reruns cannot overwrite the Developer ID signed build.
 
 Example release note text:
 
