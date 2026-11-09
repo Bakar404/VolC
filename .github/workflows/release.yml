@@ -1,0 +1,41 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Build ad-hoc signed app
+        run: |
+          xcodebuild \
+            -project VolC.xcodeproj \
+            -target VolC \
+            -configuration Release \
+            -destination 'platform=macOS' \
+            CODE_SIGN_IDENTITY=- \
+            CODE_SIGN_STYLE=Manual \
+            CODE_SIGNING_REQUIRED=YES \
+            CONFIGURATION_BUILD_DIR="$PWD/build/Release" \
+            build
+
+      - name: Verify app signature
+        run: codesign --verify --deep --strict build/Release/VolC.app
+
+      - name: Zip app bundle
+        run: ditto -c -k --sequesterRsrc --keepParent build/Release/VolC.app VolC-adhoc.zip
+
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: VolC-adhoc.zip
+          fail_on_unmatched_files: true

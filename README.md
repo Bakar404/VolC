@@ -5,6 +5,9 @@
 </p>
 
 [![macOS CI](https://github.com/Bakar404/VolC/actions/workflows/macos-ci.yml/badge.svg)](https://github.com/Bakar404/VolC/actions/workflows/macos-ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+![Platform: macOS 13+](https://img.shields.io/badge/platform-macOS%2013%2B-lightgrey)
+![Language: Swift](https://img.shields.io/badge/language-Swift-orange)
 
 VolC is a small native macOS menu bar app for controlling app audio where macOS exposes a safe public path to do it.
 
@@ -15,6 +18,15 @@ The app is intentionally simple: no virtual audio devices, no kernel extensions,
 | Light                                                                                          | Dark                                                                                         |
 | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | <img src="docs/assets/volc-ui-light.png" alt="VolC light mode popover screenshot" width="360"> | <img src="docs/assets/volc-ui-dark.png" alt="VolC dark mode popover screenshot" width="360"> |
+
+## Quick start
+
+1. Install a compatible Xcode on macOS 13 or newer; see [Compatibility](docs/COMPATIBILITY.md).
+2. Run `git clone https://github.com/Bakar404/VolC.git && cd VolC`.
+3. Run `open -a Xcode VolC.xcodeproj`, select the `VolC` scheme and `My Mac`, and choose a local signing team if prompted.
+4. Press `Cmd + R` and look for the speaker icon in the menu bar.
+
+For downloadable builds when available, see [Install from Releases](#install-from-releases).
 
 ## Status
 
@@ -70,6 +82,18 @@ Known read-only categories include Zoom, Discord, Firefox, most games, and most 
 6. Press `Cmd + R`.
 
 VolC runs as a menu bar app, so it will not appear in the Dock. Look for the speaker icon near the clock/Wi-Fi area.
+
+## Install from Releases
+
+Download the latest `VolC-adhoc.zip` from [Releases](https://github.com/Bakar404/VolC/releases), unzip it, and move **VolC.app** into **Applications**. If none is listed yet, [build from source](#build-and-run-from-xcode) below.
+
+The automated release build is **ad-hoc signed, not Developer ID signed or notarized**. macOS may block it on first open. After trying to open **VolC.app**, go to **System Settings > Privacy & Security > Open Anyway** and confirm. If it remains blocked, and you trust the download, remove its quarantine attribute and try opening it again:
+
+```sh
+xattr -dr com.apple.quarantine /Applications/VolC.app
+```
+
+The [release workflow](.github/workflows/release.yml) builds the `VolC` target in Release configuration with ad-hoc signing and automatically attaches `VolC-adhoc.zip` to a GitHub release on `v*` tag pushes. A maintainer may separately upload a Developer ID signed and notarized build as `VolC.zip`.
 
 ## Install as a Local App
 
